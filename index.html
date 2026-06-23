@@ -1,148 +1,48 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAWDE NICKNAME</title><style>
-body{
-background:#000;
-color:#00ff41;
-font-family:Consolas,monospace;
-padding:20px;
-}
+<title>LAWDE NICKNAME</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.container{
-max-width:900px;
-margin:auto;
-border:1px solid #00ff41;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 20px #00ff41;
-}
+<canvas id="matrix"></canvas>
 
-h1{
-text-align:center;
-text-shadow:0 0 10px #00ff41;
-}
+<div class="container">
 
-input{
-width:100%;
-padding:12px;
-margin:15px 0;
-background:#111;
-border:1px solid #00ff41;
-color:#00ff41;
-border-radius:8px;
-}
+<h1>LAWDE NICKNAME</h1>
+<p>Powered By CK-ERROR</p>
 
-button{
-width:100%;
-padding:12px;
-background:#00ff41;
-color:#000;
-font-weight:bold;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
+<input type="text" id="nameInput" placeholder="Enter Your Name">
 
-.nick{
-padding:10px;
-margin:8px 0;
-background:#111;
-border:1px solid #00ff41;
-border-radius:8px;
-cursor:pointer;
-}
+<div class="buttons">
+<button onclick="generateNicknames()">Generate</button>
+<button onclick="randomNick()">Random</button>
+<button onclick="downloadTxt()">Download TXT</button>
+<button onclick="toggleTheme()">Theme</button>
+</div>
 
-.nick:hover{
-box-shadow:0 0 10px #00ff41;
-}
-</style></head><body><div class="container"><h1>LAWDE NICKNAME</h1>
-<p align="center">Powered By CK-ERROR</p><input type="text" id="name" placeholder="Enter Your Name"><button onclick="generateNicknames()">GENERATE NICKNAMES</button>
+<input type="text" id="searchBox" placeholder="Search nickname..." onkeyup="searchNick()">
 
-<div id="output"></div></div><script>
+<div id="counter">Total: 0</div>
 
-function generateNicknames(){
+<div class="tabs">
+<button onclick="setCategory('all')">ALL</button>
+<button onclick="setCategory('vip')">VIP</button>
+<button onclick="setCategory('gamer')">GAMER</button>
+<button onclick="setCategory('ff')">FF</button>
+<button onclick="setCategory('bgmi')">BGMI</button>
+</div>
 
-const name=document.getElementById("name").value.trim();
+<div id="output"></div>
 
-if(!name){
-alert("Enter a name");
-return;
-}
+<h2>⭐ Favorites</h2>
+<div id="favorites"></div>
 
-const styles=[
+</div>
 
-"꧁༒"+name+"༒꧂",
-"★"+name+"★",
-"⚡"+name+"⚡",
-"☠"+name+"☠",
-"亗"+name+"亗",
-"♛"+name+"♛",
-"༄"+name+"࿐",
-"✿"+name+"✿",
-"『"+name+"』",
-"◥"+name+"◤",
-"▄︻̷̿┻̿═━一 "+name,
-"༺"+name+"༻",
-"☯"+name+"☯",
-"♚"+name+"♚",
-"░"+name+"░",
-"▓"+name+"▓",
-"◉"+name+"◉",
-"ツ "+name+" ツ",
-"✧"+name+"✧",
-"⚔"+name+"⚔",
-"♠"+name+"♠",
-"♥"+name+"♥",
-"✪"+name+"✪",
-"♜"+name+"♜",
-"☣"+name+"☣",
-"⫷"+name+"⫸",
-"彡"+name+"彡",
-"々"+name+"々",
-"Ɽ"+name+"Ɽ",
-"么"+name+"么",
-"乂"+name+"乂",
-"๛"+name+"๛",
-"ꨄ"+name+"ꨄ",
-"☘"+name+"☘",
-"✦"+name+"✦",
-"✰"+name+"✰",
-"∞"+name+"∞",
-"⦿"+name+"⦿",
-"⫷★"+name+"★⫸",
-"༒☬"+name+"☬༒",
-"♔"+name+"♔",
-"◣"+name+"◢",
-"⚜"+name+"⚜",
-"✞"+name+"✞",
-"☾"+name+"☽",
-"♕"+name+"♕",
-"✌"+name+"✌",
-"☢"+name+"☢",
-"☤"+name+"☤",
-"✧༺"+name+"༻✧"
-
-];
-
-let output="";
-
-styles.forEach(n=>{
-output+=`<div class="nick" onclick="copyNick(this.innerText)">${n}</div>`;
-});
-
-document.getElementById("output").innerHTML=output;
-
-}
-
-function copyNick(text){
-
-navigator.clipboard.writeText(text);
-
-alert("Copied: "+text);
-
-}
-
-</script></body>
+<script src="script.js"></script>
+</body>
 </html>
