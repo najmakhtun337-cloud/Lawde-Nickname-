@@ -1,0 +1,67 @@
+body{
+margin:0;
+background:#000;
+color:#00ff41;
+font-family:Consolas,monospace;
+}
+
+.container{
+position:relative;
+z-index:2;
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+text-shadow:0 0 15px #00ff41;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:#111;
+color:#00ff41;
+border:1px solid #00ff41;
+border-radius:8px;
+}
+
+button{
+padding:10px;
+margin:5px;
+background:#00ff41;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+.nick{
+padding:12px;
+margin:8px 0;
+background:#111;
+border:1px solid #00ff41;
+border-radius:8px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.copy{
+cursor:pointer;
+}
+
+.light{
+background:#fff;
+color:#111;
+}
+
+#matrix{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:1;
+}
