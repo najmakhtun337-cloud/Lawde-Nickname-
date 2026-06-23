@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAWDE NICKNAME</title><style>
+body{
+background:#000;
+color:#00ff41;
+font-family:Consolas,monospace;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+border:1px solid #00ff41;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 20px #00ff41;
+}
+
+h1{
+text-align:center;
+text-shadow:0 0 10px #00ff41;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:15px 0;
+background:#111;
+border:1px solid #00ff41;
+color:#00ff41;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#00ff41;
+color:#000;
+font-weight:bold;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.nick{
+padding:10px;
+margin:8px 0;
+background:#111;
+border:1px solid #00ff41;
+border-radius:8px;
+cursor:pointer;
+}
+
+.nick:hover{
+box-shadow:0 0 10px #00ff41;
+}
+</style></head><body><div class="container"><h1>LAWDE NICKNAME</h1>
+<p align="center">Powered By CK-ERROR</p><input type="text" id="name" placeholder="Enter Your Name"><button onclick="generateNicknames()">GENERATE NICKNAMES</button>
+
+<div id="output"></div></div><script>
+
+function generateNicknames(){
+
+const name=document.getElementById("name").value.trim();
+
+if(!name){
+alert("Enter a name");
+return;
+}
+
+const styles=[
+
+"꧁༒"+name+"༒꧂",
+"★"+name+"★",
+"⚡"+name+"⚡",
+"☠"+name+"☠",
+"亗"+name+"亗",
+"♛"+name+"♛",
+"༄"+name+"࿐",
+"✿"+name+"✿",
+"『"+name+"』",
+"◥"+name+"◤",
+"▄︻̷̿┻̿═━一 "+name,
+"༺"+name+"༻",
+"☯"+name+"☯",
+"♚"+name+"♚",
+"░"+name+"░",
+"▓"+name+"▓",
+"◉"+name+"◉",
+"ツ "+name+" ツ",
+"✧"+name+"✧",
+"⚔"+name+"⚔",
+"♠"+name+"♠",
+"♥"+name+"♥",
+"✪"+name+"✪",
+"♜"+name+"♜",
+"☣"+name+"☣",
+"⫷"+name+"⫸",
+"彡"+name+"彡",
+"々"+name+"々",
+"Ɽ"+name+"Ɽ",
+"么"+name+"么",
+"乂"+name+"乂",
+"๛"+name+"๛",
+"ꨄ"+name+"ꨄ",
+"☘"+name+"☘",
+"✦"+name+"✦",
+"✰"+name+"✰",
+"∞"+name+"∞",
+"⦿"+name+"⦿",
+"⫷★"+name+"★⫸",
+"༒☬"+name+"☬༒",
+"♔"+name+"♔",
+"◣"+name+"◢",
+"⚜"+name+"⚜",
+"✞"+name+"✞",
+"☾"+name+"☽",
+"♕"+name+"♕",
+"✌"+name+"✌",
+"☢"+name+"☢",
+"☤"+name+"☤",
+"✧༺"+name+"༻✧"
+
+];
+
+let output="";
+
+styles.forEach(n=>{
+output+=`<div class="nick" onclick="copyNick(this.innerText)">${n}</div>`;
+});
+
+document.getElementById("output").innerHTML=output;
+
+}
+
+function copyNick(text){
+
+navigator.clipboard.writeText(text);
+
+alert("Copied: "+text);
+
+}
+
+</script></body>
+</html>
